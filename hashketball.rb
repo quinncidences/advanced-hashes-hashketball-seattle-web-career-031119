@@ -123,13 +123,11 @@ def num_points_scored(player_name)
   game_hash.each do |location, team_data|
     team_data[:players].each do |person, data|
       binding.pry
-            if person == player_name && x == :points
-              array.push(y)
+            if person == player_name
+              array << data[:points]
       end
     end
   end
-  return array[0]
-end
 
 
 def shoe_size(player_name)
