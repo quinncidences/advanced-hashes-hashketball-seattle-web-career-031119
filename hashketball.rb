@@ -119,15 +119,15 @@ def game_hash
 end
 # team_data[:team_name][:players]
 def num_points_scored(player_name)
-  array = []
+  points = nil
   game_hash.each do |location, team_data|
     team_data[:players].each do |person, data|
       if person == player_name
-        array << data[:points]
+        points = data[:points]
       end
     end
   end
-  array[0]
+  points
 end
 
 
