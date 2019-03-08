@@ -121,9 +121,12 @@ end
 def num_points_scored(player_name)
   array = []
   game_hash.each do |location, team_data|
+    binding.pry
     team_data.each do |attribute, data|
+      binding.pry
       if attribute == :players
         data.each do |person, data|
+          binding.pry
           data.each do |x, y|
             if person == player_name && x == :points
               array.push(y)
