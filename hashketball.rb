@@ -125,9 +125,6 @@ def num_points_scored(player_name)
       binding.pry
             if person == player_name && x == :points
               array.push(y)
-            end
-          end
-        end
       end
     end
   end
