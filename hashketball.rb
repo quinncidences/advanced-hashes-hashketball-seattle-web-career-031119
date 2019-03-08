@@ -122,7 +122,6 @@ def num_points_scored(player_name)
   array = []
   game_hash.each do |location, team_data|
     team_data[:players].each do |person, data|
-      binding.pry
             if person == player_name
               array << data[:points]
       end
